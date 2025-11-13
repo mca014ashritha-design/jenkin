@@ -9,14 +9,14 @@ pipeline{
             stage('Compile'){
                       steps{
                           echo "Compiling..."
-                          sh "javac HelloWorl.java"
+                          sh "javac HelloWorld.java"
                 }
           }
           stage('Run')
             {
                 steps{
                     echo "Running..."
-                    sh "java HelloWorl"
+                    sh "java HelloWorld"
           }
     }
   }
