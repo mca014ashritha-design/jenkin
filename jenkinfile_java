@@ -19,5 +19,12 @@ pipeline{
                     sh "java HelloWorld"
           }
     }
+    stage('Python Run')
+    {
+      steps{
+            echo "Running python.."
+             sh "python3 p1.py" 
   }
+}
+}
 }
