@@ -1,23 +1,23 @@
-pipelin{
-agent any
-stages{
-stage('Checkout'){
-steps{
-git branch: 'main',url:'https://github.com/mca014ashritha-design/jenkin'
-}
-}
-stage('Compile'){
-steps{
-echo "Compiling..."
-sh "javac HelloWorl.java"
-}
-}
-stage('Run')
-{
-steps{
-echo "Running..."
-sh "java HelloWorl"
-}
-}
-}
+pipeline{
+  agent any
+    stages{
+        stage('Checkout'){
+            steps{
+                                git branch: 'main',url:'https://github.com/mca014ashritha-design/jenkin'
+            }
+      }
+            stage('Compile'){
+                      steps{
+                          echo "Compiling..."
+                          sh "javac HelloWorl.java"
+                }
+          }
+          stage('Run')
+            {
+                steps{
+                    echo "Running..."
+                    sh "java HelloWorl"
+          }
+    }
+  }
 }
